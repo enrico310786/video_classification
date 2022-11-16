@@ -1,0 +1,20 @@
+Title
+
+Classification Report
+
+                     precision    recall  f1-score   support
+
+        Diving-Side       1.00      1.00      1.00       100
+         Golf-Swing       1.00      1.00      1.00       104
+            Kicking       1.00      1.00      1.00       100
+            Lifting       1.00      1.00      1.00        99
+       Riding-Horse       1.00      1.00      1.00       102
+           Run-Side       1.00      1.00      1.00       102
+SkateBoarding-Front       1.00      1.00      1.00       102
+        Swing-Bench       1.00      1.00      1.00       100
+    Swing-SideAngle       1.00      1.00      1.00       100
+         Walk-Front       1.00      1.00      1.00        99
+
+           accuracy                           1.00      1008
+          macro avg       1.00      1.00      1.00      1008
+       weighted avg       1.00      1.00      1.00      1008
