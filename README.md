@@ -3,6 +3,9 @@
 In this project I show how to train and evaluate a classifier 
 model to perform actions classification on video clip.
 
+You can read more about this project on the following Medium post:
+https://medium.com/@enrico.randellini/hands-on-video-classification-with-pytorchvideo-dc9cfcc1eb5f
+
 As a complete use case, I show how to perform data cleaning and augmentation 
 on the UCF Sports Action Dataset. You can download the dataset
 and read its properties from this [link](https://www.crcv.ucf.edu/data/UCF_Sports_Action.php).
