@@ -40,12 +40,8 @@ def setup(rank, cfg):
 
 def find_last_checkpoint_file(checkpoint_dir, use_best_checkpoint=False):
     '''
-    Cerco nella directory checkpoint_dir il file .pth con l'epoca maggiore.
-    Se use_best_checkpoint = True prendo il best checkpoint
-    Se use_best_checkpoint = False prendo quello con l'epoca maggiore tra i checkpoint ordinari
-    :param checkpoint_dir:
-    :param use_best_checkpoint:
-    :return:
+    If use_best_checkpoint = True select the best checkpoint
+    If use_best_checkpoint = False select the .pth file with the greater epoch number
     '''
     print("Cerco il file .pth in checkpoint_dir {}: ".format(checkpoint_dir))
     list_file_paths = []
@@ -127,9 +123,7 @@ def cleanup():
 
 
 def plot_learning_curves(epochs, train_losses, val_losses, train_accuracies, val_accuracies, path_save):
-    '''
-    La funzione plotta le learning curves sul train e validation set di modelli già allenati
-    '''
+
     x_axis = range(0, epochs)
 
     plt.figure(figsize=(27,9))
@@ -199,7 +193,7 @@ def subsample_and_resize_frames(list_frames, sample_rate, img_size):
             subsampled_list_frames.append(frame)
     return subsampled_list_frames
 
-
+'''
 transform = A.ReplayCompose([
     #A.ElasticTransform(alpha=0.1, p=0.5),
     A.GridDistortion(distort_limit=0.4, p=0.6),
@@ -214,8 +208,8 @@ transform = A.ReplayCompose([
     A.PixelDropout(drop_value=255, dropout_prob=0.02, p=0.5),
     A.Blur(blur_limit=(2, 4), p=0.5)
 ])
-
 '''
+
 transform = A.ReplayCompose([
     A.ElasticTransform(alpha=0.5, p=0.5),
     A.ShiftScaleRotate(scale_limit=0.05, rotate_limit=10, p=0.5),
@@ -226,7 +220,7 @@ transform = A.ReplayCompose([
     A.PixelDropout(drop_value=255, dropout_prob=0.01, p=0.5),
     A.Blur(blur_limit=(2, 4), p=0.5)
 ])
-'''
+
 
 def augment_frames(frame_list):
     data = None
