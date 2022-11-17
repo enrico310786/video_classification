@@ -9,8 +9,6 @@ import argparse
 from pytorchvideo.data.encoded_video import EncodedVideo
 import random
 import shutil
-import cv2
-import albumentations as A
 import pandas as pd
 from utils import create_augmented_video, load_video, augment_frames
 
@@ -106,7 +104,7 @@ def create_mp4(dir_dataset, dir_dataset_new):
                 new_dir_path = os.path.join(dir_dataset_new, class_name)
                 CHECK_FOLDER = os.path.isdir(new_dir_path)
                 if not CHECK_FOLDER:
-                    print("Creo la directory : ", new_dir_path)
+                    print("Create the directory : ", new_dir_path)
                     os.makedirs(new_dir_path)
 
                 for sub_subdir, sub_dirs, sub_files in os.walk(path_subdir):
@@ -357,6 +355,8 @@ if __name__ == "__main__":
     # 4) Create csv for train, val and test dataset
     class2label = create_dict_class2label(dir_dataset_grouped_augmented_ttv_mp4)
     print("class2label: ", class2label)
+    print("")
+    print("list of classes: ", [key for key in class2label.keys()])
 
     print("----------------------------------")
 
