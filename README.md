@@ -1,4 +1,4 @@
-# Video classification
+# Video classification with PyTorchVideo
 
 In this project I show how to train and evaluate a classifier 
 model to perform actions classification on video clip.
@@ -149,3 +149,11 @@ you can apply inference to some video clips and check the result
 ## Trained model
 
 You can download my trained model from this [link](https://drive.google.com/file/d/1XtXNCWxLVv7NanNGPCHBqdtiRR-OzGQt/view?usp=share_link)
+
+## Environment
+
+I use Python 3.7.9
+
+To run the scripts in your device create an environment using the file 'requirements.txt'
+
+To run the script on AWS use the file 'requirements_docker.txt' as expressed in the Dockerfile
